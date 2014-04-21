@@ -1,0 +1,28 @@
+  0        2          12             *                *            /usr/bin/find
+@hourly foo
+*       *       *       *       *       /sbin/ping -c 1 192.168.0.1 > /dev/null
+0 0,12 1 */2 * /sbin/ping -c 192.168.0.1; ls -la >>/var/log/cronrun
+0 2 1-10 * * du -h --max-depth=1 /
+0 4 15-21 * 1 /command
+0 4 8-14 * *  test $(date +%u) -eq 7 && echo "2nd Sunday"
+1 0 * * *  printf > /var/log/apache/error_log
+0 */2 * * *  /home/username/test.pl
+
+
+00 09-18 * * * /home/sathiya/ubuntu/bin/check-db-status
+00 20 * * * /home/oracle/scripts/export_dump.sh
+
+@yearly /home/ramesh/annual-maintenance
+*/10 * * * * /home/ramesh/check-disk-space
+@monthly /home/ramesh/suse/bin/tape-backup
+5 0 * * *       $HOME/bin/daily.job >> $HOME/tmp/out 2>&1
+# run at 2:15pm on the first of every month -- output mailed to paul
+15 14 1 * *     $HOME/bin/monthly
+# run at 10 pm on weekdays, annoy Joe
+0 22 * * 1-5    mail -s "It's 10pm" joe%Joe,%%Where are your kids?%
+23 0-23/2 * * * echo "run 23 minutes after midn, 2am, 4am ..., everyday"
+5 4 * * sun     echo "run at 5 after 4 every sunday"
+
+59 11 * * 1,2,3,4,5 foo
+59 11 * * 1-5 echo
+* 12 1-15,17,20-25 * * echo

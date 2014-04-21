@@ -1,0 +1,62 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-top: 30px;
+    /* Margin bottom by footer height */
+    margin-bottom: 30px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 30px;
+    background-color: #f5f5f5;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container .text-muted {
+    margin: 5px 0;
+}
+
+.next-10 {
+    display: none;
+    margin-top: 30px;
+}
+
+#next-10-executions li {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace
+}
+
+.cron-entry {
+    background-color: #F4F8FA;
+    border-radius: 4px;
+    box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+    border: 1px solid #5BC0DE;
+    padding: 45px 15px 15px;
+    position: relative;
+}
+
+.cron-entry:after {
+    color: #5BC0DE;
+    content: "Enter your crontab";
+    font-size: 12px;
+    font-weight: 700;
+    left: 15px;
+    letter-spacing: 1px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 15px;
+}
